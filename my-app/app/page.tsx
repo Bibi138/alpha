@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <div className="w-full h-min-screen text-slate-900 bg-slate-50">
 
-      <div className="flex flex-col items-center justify-center w-[100px] h-[10vh] ml-[20px]">
-        <Image 
+      <div className="flex flex-col items-center justify-center w-[100px] h-[10vh] ml-[0px]">
+        {/* <Image 
           src={imgAlphaLogo} 
           width={626} height={626} 
           alt="no img alpha" 
           className="w-[700px] h-[700px] opacity-50"
-        />
+        /> */}
       </div>
 
       <main>
