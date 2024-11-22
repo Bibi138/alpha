@@ -3,16 +3,16 @@ import imgAlphaLogo from "/public/alpha_letter.png";
 
 const Header = () => {
     return (
-        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 border border-b-slate-700'>
-            <div className="flex flex-col items-center justify-start w-[112px] h-[80px] border ml-0">
+        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-b-slate-700'>
+            <div className="flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
                     src={imgAlphaLogo} 
                     width={626} 
                     height={626}
                     alt="no img alpha"
-                    className="relative -top-6 flex w-[107px] h-[107px] opacity-60 border border-blue-500"
+                    className="relative -top-6 flex w-[107px] h-[107px] opacity-60"
                 />
-                <legend className='absolute w-[107px]text-sm font-bold top-12'>en minuscule</legend>
+                <legend className='absolute text-sm font-bold top-12'>en minuscule</legend>
             </div>
 
             <nav className="w-full">
