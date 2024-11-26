@@ -3,16 +3,7 @@ import imgAlphaLogo from "/public/alpha_letter.png";
 
 export default function Home() {
   return (
-    <div className="absolute -z-20 w-full min-h-screen text-slate-900 bg-slate-50">
-
-      <div className="fixed -z-10 flex flex-col items-center justify-center w-full h-full">
-        <Image 
-          src={imgAlphaLogo} 
-          width={626} height={626} 
-          alt="no img alpha" 
-          className="w-[700px] h-[700px] opacity-50"
-        />
-      </div>
+    <div>
 
       <main>
         

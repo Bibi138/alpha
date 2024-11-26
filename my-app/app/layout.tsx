@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import dynamic from 'next/dynamic';
+
 //import localFont from "next/font/local";
+import Image from "next/image";
+import imgAlphaLogo from "/public/alpha_letter.png";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,12 +29,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+    /* const DynamicHeader = dynamic(() => import('@/app/components/Header'), {
+      loading: () => <p>Loading...</p>,
+    }); */
   //className={`${geistSans.variable} ${geistMono.variable} antialiased`}
   return (
     <html lang="en">
-      <body>
+      <body className="absolute -z-20 w-full min-h-screen text-slate-900 bg-slate-50">
+        <div className="fixed -z-10 flex flex-col items-center justify-center w-full h-full">
+          <Image 
+            src={imgAlphaLogo} 
+            width={626} height={626} 
+            alt="no img alpha" 
+            className="w-[700px] h-[700px] opacity-50"
+          />
+        </div>
         <Header />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>
