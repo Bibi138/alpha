@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic';
-
+//import dynamic from 'next/dynamic';
 //import localFont from "next/font/local";
 import Image from "next/image";
 import imgAlphaLogo from "/public/alpha_letter.png";

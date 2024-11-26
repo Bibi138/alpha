@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from "next/link";
 import Image from 'next/image';
 import imgAlphaLogo from "/public/alpha_letter.png";
 
@@ -30,7 +31,7 @@ const Header = (): JSX.Element => {
                 <ul className="flex items-end justify-end h-[70px]">
 
                     <li className="list-none mr-10">
-                        <a href="/" className="w-full text-base no-underline text-xl font-bold">Home</a>
+                        <Link href="/" className="w-full text-base no-underline text-xl font-bold">Home</Link>
                     </li>
 
                     {/* Bouton "Arts" avec un conteneur relatif pour le menu déroulant */}
@@ -47,26 +48,26 @@ const Header = (): JSX.Element => {
                         {isOpenMenu === true ? (
                             <ul className='absolute w-[200px] bg-slate-900 text-white mt-2 rounded-md shadow-lg'>
                                 <li className="list-none">
-                                    <a href="/Movies" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Movies</a>
+                                    <Link href="/Movies" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Movies</Link>
                                 </li>
                                 <li className="list-none">
-                                    <a href="/Paintings" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Paintings</a>
+                                    <Link href="/Paintings" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Paintings</Link>
                                 </li>
                                 <li className="list-none">
-                                    <a href="/Photos" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Photos</a>
+                                    <Link href="/Photos" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Photos</Link>
                                 </li>                    
                                 <li className="list-none">
-                                    <a href="/Theatre" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Theatre</a>
+                                    <Link href="/Theatre" className="block w-full text-base no-underline text-xl font-bold px-4 py-2 hover:bg-slate-700">Theatre</Link>
                                 </li>
                             </ul>
                         ) : null}
                     </div>
 
                     <li className="list-none mr-10">
-                        <a href="/Shop" className="w-full text-base no-underline text-xl font-bold">Shop</a>
+                        <Link href="/Shop" className="w-full text-base no-underline text-xl font-bold">Shop</Link>
                     </li>
                     <li className="list-none mr-10">
-                        <a href="/Contact" className="w-full text-base no-underline text-xl font-bold">Contact</a>
+                        <Link href="/Contact" className="w-full text-base no-underline text-xl font-bold">Contact</Link>
                     </li>
                 </ul>
             </nav>
