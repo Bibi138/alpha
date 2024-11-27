@@ -20,9 +20,9 @@ export default function Home() {
           <article className="border text-justify bg-slate-200 rounded shadow-box mx-10 mb-10 p-4">
             <p className="indent-4 mb-2">
                 Bienvenue sur le site de notre maison d&apos;&apos;édition. Mon ambition est de rassembler une 
-                variété d'&apos;arts que je vais mettre en œuvre à partir de maintenant. Vous y trouverez 
+                variété d&apos;arts que je vais mettre en œuvre à partir de maintenant. Vous y trouverez 
                 des photographies ainsi que des peintures qui accompagneront les livres que je prévois 
-                de publier. C'&apos;est un défi passionnant que je me lance, et je suis déterminé à explorer 
+                de publier. C&apos;est un défi passionnant que je me lance, et je suis déterminé à explorer 
                 ce site Internet tout en me laissant guider par mes inspirations. Je reste ouvert à 
                 toute idée lumineuse qui pourrait éclairer mon chemin.
             </p>

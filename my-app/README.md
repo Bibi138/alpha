@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+1) Le dev qui a souffert le martyre + photo
+2) prévoir les tailles pour mediascreen (smartphone)
+3) db pour livre et articles en ventes
+4) videos + img + paintings (galeries)
+5) ...
+
+
 First, run the development server:
 
 ```bash
