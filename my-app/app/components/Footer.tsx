@@ -1,7 +1,7 @@
-const Footer = () => {
+const Footer = (): JSX.Element => {
     return (
-        <footer className="w-full h-[70px]">
-            <h3>Fabio Lourenço © 2024</h3>
+        <footer className="flex flex-col items-center jsutify-center w-full h-[70px] text-slate-50 bg-slate-900">
+            <p className="m-auto">Fabio Lourenço © 2024</p>
         </footer>
     )
 }

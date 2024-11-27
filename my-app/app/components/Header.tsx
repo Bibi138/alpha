@@ -25,9 +25,9 @@ const Header = (): JSX.Element => {
                     width={626} 
                     height={626}
                     alt="no img alpha"
-                    className="relative -top-6 flex w-[107px] h-[107px] opacity-60"
+                    className="relative -top-[20px] flex w-[107px] h-[107px] opacity-60"
                 />
-                <legend className='absolute text-sm font-bold top-12'>en minuscule</legend>
+                <legend className='absolute text-sm font-bold top-[50px]'>en minuscule</legend>
             </div>
 
             <nav className="w-full">
