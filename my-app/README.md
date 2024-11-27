@@ -2,12 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-1) Le dev qui a souffert le martyre + photo
-2) prévoir les tailles pour mediascreen (smartphone)
-3) db pour livre et articles en ventes
-4) videos + img + paintings (galeries)
-5) ...
-
+1) Prévoir les tailles pour mediascreen (smartphone)
+2) Loading + img 
+3) Titre page scale
+4) Page à remplir Main page (contenu).
+5) emailjs ou email
+6) db pour livre et articles en ventes
+7) videos + img + paintings (galeries)
+8) Game (snake + pacman)
+9) Le dev qui a souffert le martyre + photo :D
 
 First, run the development server:
 
