@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from 'next/image';
+import { FaLongArrowAltDown } from "react-icons/fa";
 import imgAlphaLogo from "/public/alpha_letter.png";
 
 const Header = (): JSX.Element => {
@@ -33,7 +34,7 @@ const Header = (): JSX.Element => {
             <nav className="w-full">
                 <ul className="flex items-end justify-end h-[70px]">
 
-                    <li className="list-none mr-6">
+                    <li className="list-none mr-8">
                         <Link href="/" className="w-full no-underline text-xl font-bold">Home</Link>
                     </li>
 
@@ -41,13 +42,14 @@ const Header = (): JSX.Element => {
                         onMouseLeave={() => setIsOpenMenu(false)}
                         onClick={handleClick}
                         className="relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300 active:text-slate-100
-                            hover:bg-slate-800 active:bg-slate-900 rounded-tr rounded-tl -mb-2 mr-6">
+                            hover:bg-slate-800 active:bg-slate-900 rounded-tr rounded-tl -mb-2 mr-8">
                         <div className='flex flex-row items-center justify-between py-1 pb-2'>
                             <p className="pl-2"
                             >
                                 Arts
                             </p>
-                            <span className='text-sm pr-2 pl-1 pt-1'>⬇</span>
+                            {/* <span className='text-sm pr-2 pl-1 pt-1'>⬇</span> */}
+                            <span><FaLongArrowAltDown size={20} /></span>
                         </div>
 
                         {isOpenMenu === true ? (
