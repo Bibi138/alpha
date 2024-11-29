@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { FaLongArrowAltDown } from "react-icons/fa";
 import imgAlphaLogo from "/public/alpha_letter.png";
 
 const Header = (): JSX.Element => {
 
+    const pathname = usePathname();
     const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
     const handleClick = (): void => {
@@ -19,14 +21,14 @@ const Header = (): JSX.Element => {
     }, [isOpenMenu]);
 
     return (
-        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-b-slate-700'>
+        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-slate-400'>
             <div className="relative flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
                     src={imgAlphaLogo}
                     width={626} 
                     height={626}
                     alt="no img alpha"
-                    className="relative -top-[20px] flex w-[107px] h-[107px] opacity-60"
+                    className="relative -top-[20px] flex w-[107px] h-[107px] opacity-50"
                 />
                 <legend className='absolute text-sm font-bold top-[50px]'>en minuscule</legend>
             </div>
@@ -34,7 +36,7 @@ const Header = (): JSX.Element => {
             <nav className="w-full">
                 <ul className="flex items-end justify-end h-[70px]">
 
-                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-8">
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-8 ${pathname === '/' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link 
                             href="/" 
                             className="w-full text-xl font-bold"
@@ -51,7 +53,7 @@ const Header = (): JSX.Element => {
                         <div className='flex flex-row items-center justify-between py-1 pb-2'>
                             <p className="pl-2"
                             >
-                                Arts
+                                {pathname === "/Movies" ? "Movies" : pathname === "/Paintings" ? "Paintings" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Theatre" : "Arts"}
                             </p>
                             <span><FaLongArrowAltDown size={20} /></span>
                         </div>
@@ -74,10 +76,10 @@ const Header = (): JSX.Element => {
                         ) : null}
                     </div>
 
-                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10">
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Shop' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link href="/Shop" className="w-full text-xl font-bold">Shop</Link>
                     </li>
-                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10">
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Contact' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link href="/Contact" className="w-full text-xl font-bold">Contact</Link>
                     </li>
                 </ul>
