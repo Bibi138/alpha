@@ -5,7 +5,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ---
 
 1) Prévoir les tailles pour mediascreen (smartphone)
-2) couleur page correspondante au drop-down
+2) loading 1s timeOut 1s
+4) darkmode à ajouter
 4) Page à remplir Main page (contenu).
 5) emailjs ou email
 6) db pour livre et articles en ventes
