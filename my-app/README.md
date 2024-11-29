@@ -2,9 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+---
+
 1) Prévoir les tailles pour mediascreen (smartphone)
-2) Loading + img 
-3) Titre page scale
+2) couleur page correspondante au drop-down
 4) Page à remplir Main page (contenu).
 5) emailjs ou email
 6) db pour livre et articles en ventes
