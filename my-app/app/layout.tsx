@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Image from "next/image";
 import imgAlphaLogo from "/public/alpha_letter.png";
 import "./globals.css";
-import Header from "./components/Header";
+//import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 /*const geistSans = localFont({
