@@ -59,16 +59,16 @@ const Header = (): JSX.Element => {
                         {isOpenMenu === true ? (
                             <ul className='absolute w-[200px] bg-slate-900 text-white mt-0 rounded-br-md rounded-bl-md shadow-lg'>
                                 <li className="list-none">
-                                    <Link href="/Movies" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Movies</Link>
+                                    <Link href="/Movies" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Movies</Link>
                                 </li>
                                 <li className="list-none">
-                                    <Link href="/Paintings" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Paintings</Link>
+                                    <Link href="/Paintings" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Paintings</Link>
                                 </li>
                                 <li className="list-none">
-                                    <Link href="/Photos" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Photos</Link>
+                                    <Link href="/Photos" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Photos</Link>
                                 </li>                    
                                 <li className="list-none">
-                                    <Link href="/Theatre" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500 rounded-br-md rounded-bl-md">Theatre</Link>
+                                    <Link href="/Theatre" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500 rounded-br-md rounded-bl-md">Theatre</Link>
                                 </li>
                             </ul>
                         ) : null}
