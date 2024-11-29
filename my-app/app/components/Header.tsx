@@ -21,7 +21,7 @@ const Header = (): JSX.Element => {
     }, [isOpenMenu]);
 
     return (
-        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-slate-400'>
+        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-slate-500/90'>
             <div className="relative flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
                     src={imgAlphaLogo}
@@ -34,7 +34,7 @@ const Header = (): JSX.Element => {
             </div>
 
             <nav className="w-full">
-                <ul className="flex items-end justify-end h-[70px]">
+                <ul className="flex items-end justify-end h-[69px]">
 
                     <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-8 ${pathname === '/' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link 
@@ -48,30 +48,69 @@ const Header = (): JSX.Element => {
                     <div onMouseEnter={() => setIsOpenMenu(true)}
                         onMouseLeave={() => setIsOpenMenu(false)}
                         onClick={handleClick}
-                        className="relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300 active:text-slate-100
-                            hover:bg-slate-800 active:bg-slate-900 rounded-tr rounded-tl -mb-2 mr-8">
-                        <div className='flex flex-row items-center justify-between py-1 pb-2'>
-                            <p className="pl-2"
-                            >
+                        className={`${pathname === "/Movies" 
+                            ? "text-slate-700 scale-110 hover:text-slate-300" 
+                            : pathname === "/Paintings" 
+                            ? "text-slate-700 scale-110 hover:text-slate-300"
+                            : pathname === "/Photos" 
+                            ? "text-slate-700 scale-110 hover:text-slate-300" 
+                            : pathname === "/Theatre" 
+                            ? "text-slate-700 scale-110 hover:text-slate-300" 
+                            : "font-bold hover:scale-110"} relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300
+                            hover:bg-slate-800 rounded-tr rounded-tl -mb-2 mr-8`}>
+
+                        <div className="flex flex-row items-center justify-between mb-1 pr-2 pl-1 py-1">
+
+                            <p className="pl-2">
                                 {pathname === "/Movies" ? "Movies" : pathname === "/Paintings" ? "Paintings" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Theatre" : "Arts"}
                             </p>
                             <span><FaLongArrowAltDown size={20} /></span>
+
                         </div>
 
                         {isOpenMenu === true ? (
-                            <ul className='absolute w-[200px] bg-slate-900 text-white mt-0 rounded-br-md rounded-bl-md shadow-lg'>
-                                <li className="list-none">
-                                    <Link href="/Movies" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Movies</Link>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/Paintings" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Paintings</Link>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/Photos" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500">Photos</Link>
-                                </li>                    
-                                <li className="list-none">
-                                    <Link href="/Theatre" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-500 rounded-br-md rounded-bl-md">Theatre</Link>
-                                </li>
+                            <ul className='absolute w-[200px] bg-slate-800 text-slate-300 mt-0 rounded-br-md rounded-bl-md shadow-lg'>
+                                {pathname !== "/Movies" ? (
+                                    <li className="list-none">
+                                        <Link 
+                                            href="/Movies" 
+                                            className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600"
+                                        >
+                                            Movies    
+                                        </Link>
+                                    </li>
+                                ) : null}
+                                {pathname !== "/Paintings" ? (
+                                    <li className="list-none">
+                                        <Link 
+                                            href="/Paintings" 
+                                            className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600"
+                                        >
+                                            Paintings
+                                        </Link>
+                                    </li>
+                                ) : null}
+                                {pathname !== "/Photos" ? (
+                                    <li className="list-none">
+                                        <Link 
+                                            href="/Photos" 
+                                            className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 hover:rounded-br-md hover:rounded-bl-md"
+                                        >
+                                            Photos
+                                        </Link>
+                                    </li> 
+                                ) : null}
+                                {pathname !== "/Theatre" ? (
+                                    <li className="list-none">
+                                        <Link 
+                                            href="/Theatre" 
+                                            className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 rounded-br-md rounded-bl-md"
+                                            
+                                        >
+                                            Theatre
+                                        </Link>
+                                    </li>
+                                ) : null}
                             </ul>
                         ) : null}
                     </div>
@@ -79,7 +118,7 @@ const Header = (): JSX.Element => {
                     <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Shop' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link href="/Shop" className="w-full text-xl font-bold">Shop</Link>
                     </li>
-                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Contact' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-12 ${pathname === '/Contact' ? "text-slate-700 scale-110" : "text-slate-500"}`}>
                         <Link href="/Contact" className="w-full text-xl font-bold">Contact</Link>
                     </li>
                 </ul>
