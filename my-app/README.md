@@ -4,15 +4,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ---
 
-1) Prévoir les tailles pour mediascreen (smartphone)
-2) loading 1s timeOut 1s
-4) darkmode à ajouter
-4) Page à remplir Main page (contenu).
-5) emailjs ou email
-6) db pour livre et articles en ventes
-7) videos + img + paintings (galeries)
-8) Game (snake + pacman)
-9) Le dev qui a souffert le martyre + photo :D
+1) loading 1s timeOut 1s
+2) darkmode à ajouter
+3) Prévoir les tailles pour mediascreen (smartphone)
+4) Music
+5) Page à remplir Main page (contenu).
+6) emailjs ou email
+7) db pour livre et articles en ventes
+8) videos + img + paintings (galeries)
+9) Game (snake + pacman)
+10) Le dev qui a souffert le martyre + photo :D
 
 First, run the development server:
 
