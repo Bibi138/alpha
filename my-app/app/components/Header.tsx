@@ -22,7 +22,7 @@ const Header = (): JSX.Element => {
         <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-b-slate-700'>
             <div className="relative flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
-                    src={imgAlphaLogo} 
+                    src={imgAlphaLogo}
                     width={626} 
                     height={626}
                     alt="no img alpha"
@@ -34,8 +34,13 @@ const Header = (): JSX.Element => {
             <nav className="w-full">
                 <ul className="flex items-end justify-end h-[70px]">
 
-                    <li className="list-none mr-8">
-                        <Link href="/" className="w-full no-underline text-xl font-bold">Home</Link>
+                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-8">
+                        <Link 
+                            href="/" 
+                            className="w-full text-xl font-bold"
+                        >
+                            Home
+                        </Link>
                     </li>
 
                     <div onMouseEnter={() => setIsOpenMenu(true)}
@@ -48,33 +53,32 @@ const Header = (): JSX.Element => {
                             >
                                 Arts
                             </p>
-                            {/* <span className='text-sm pr-2 pl-1 pt-1'>⬇</span> */}
                             <span><FaLongArrowAltDown size={20} /></span>
                         </div>
 
                         {isOpenMenu === true ? (
                             <ul className='absolute w-[200px] bg-slate-900 text-white mt-0 rounded-br-md rounded-bl-md shadow-lg'>
                                 <li className="list-none">
-                                    <Link href="/Movies" className="block w-full no-underline text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700">Movies</Link>
+                                    <Link href="/Movies" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Movies</Link>
                                 </li>
                                 <li className="list-none">
-                                    <Link href="/Paintings" className="block w-full no-underline text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700">Paintings</Link>
+                                    <Link href="/Paintings" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Paintings</Link>
                                 </li>
                                 <li className="list-none">
-                                    <Link href="/Photos" className="block w-full no-underline text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700">Photos</Link>
+                                    <Link href="/Photos" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500">Photos</Link>
                                 </li>                    
                                 <li className="list-none">
-                                    <Link href="/Theatre" className="block w-full no-underline text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 rounded-br-md rounded-bl-md">Theatre</Link>
+                                    <Link href="/Theatre" className="block w-full text-xl font-bold bg-slate-800 px-4 py-2 hover:text-slate-300 hover:bg-slate-700 active:bg-slate-500 rounded-br-md rounded-bl-md">Theatre</Link>
                                 </li>
                             </ul>
                         ) : null}
                     </div>
 
-                    <li className="list-none mr-10">
-                        <Link href="/Shop" className="w-full no-underline text-xl font-bold">Shop</Link>
+                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10">
+                        <Link href="/Shop" className="w-full text-xl font-bold">Shop</Link>
                     </li>
-                    <li className="list-none mr-10">
-                        <Link href="/Contact" className="w-full no-underline text-xl font-bold">Contact</Link>
+                    <li className="list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 hover:scale-110 active:text-slate-300 active:scale-95 mr-10">
+                        <Link href="/Contact" className="w-full text-xl font-bold">Contact</Link>
                     </li>
                 </ul>
             </nav>
