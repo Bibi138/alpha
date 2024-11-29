@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const Contact = (): JSX.Element => {
     return (
         <div className="w-full min-h-screen">
-            <h1 className="text-3xl font-bold text-slate-500 pt-24 pl-4">Contact</h1>
+            <h1 className="text-2xl font-bold text-slate-500 pt-24 pl-4">Contact</h1>
 
             <main className="flex flex-col items-center justify-content w-full h-screen">
                 <div className="mt-[150px]">
