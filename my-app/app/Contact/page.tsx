@@ -13,9 +13,9 @@ const Contact = (): JSX.Element => {
             <h1 className="text-2xl font-bold text-slate-500 pt-24 pl-4">Contact</h1>
 
             <main className="flex flex-col items-center justify-content w-full h-screen">
-                <div className="mt-[150px]">
+                <div className="mt-20">
 
-                    <div className='flex flex-row items-center justify-center w-[1000px] h-[400px] bg-slate-50 rounded shadow-box'>
+                    <div className='flex flex-row items-center justify-center w-[1000px] h-[300px] bg-slate-50 rounded shadow-box'>
 
                         <div className="flex flex-row items-center justify-center w-[1200px]">
                             <p className="text-xl text-slate-500">Email: &nbsp;</p>
@@ -26,7 +26,7 @@ const Contact = (): JSX.Element => {
                             src={imgPhotoContact} 
                             width={1840} height={4080} 
                             alt="img photo contact" 
-                            className="flex w-[400px] h-[400px] rounded-tr-md rounded-br-md"
+                            className="flex w-[300px] h-[300px] rounded-tr-md rounded-br-md"
                         />
 
                     </div>
