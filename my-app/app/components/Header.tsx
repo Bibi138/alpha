@@ -17,7 +17,11 @@ const Header = (): JSX.Element => {
     };
 
     useEffect(() => {
-        setIsOpenMenu((prev) => prev);
+        const handleOpen = () => {
+            setIsOpenMenu((prev) => prev);
+        }
+        handleOpen();
+        return () => console.log("clean-up");
     }, [isOpenMenu]);
 
     return (
@@ -48,7 +52,9 @@ const Header = (): JSX.Element => {
                     <div onMouseEnter={() => setIsOpenMenu(true)}
                         onMouseLeave={() => setIsOpenMenu(false)}
                         onClick={handleClick}
-                        className={`${pathname === "/Movies" 
+                        className={`${pathname === "/Presentation"
+                            ? "text-slate-700 scale-110 hover:text-slate-300" 
+                            : pathname === "/Movies" 
                             ? "text-slate-700 scale-110 hover:text-slate-300" 
                             : pathname === "/Paintings" 
                             ? "text-slate-700 scale-110 hover:text-slate-300"
@@ -56,13 +62,13 @@ const Header = (): JSX.Element => {
                             ? "text-slate-700 scale-110 hover:text-slate-300" 
                             : pathname === "/Theatre" 
                             ? "text-slate-700 scale-110 hover:text-slate-300" 
-                            : "font-bold hover:scale-110"} relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300
+                            : "font-bold hover:scale-110"} "relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300
                             hover:bg-slate-800 rounded-tr rounded-tl -mb-2 mr-8`}>
 
                         <div className="flex flex-row items-center justify-between mb-1 pr-2 pl-1 py-1">
 
                             <p className="pl-2">
-                                {pathname === "/Movies" ? "Movies" : pathname === "/Paintings" ? "Paintings" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Theatre" : "Arts"}
+                                {pathname === "/Presentation" ? "Presentation" : pathname === "/Movies" ? "Movies" : pathname === "/Paintings" ? "Paintings" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Theatre" : "Arts"}
                             </p>
                             <span><FaLongArrowAltDown size={20} /></span>
 
@@ -70,6 +76,16 @@ const Header = (): JSX.Element => {
 
                         {isOpenMenu === true ? (
                             <ul className='absolute w-[200px] bg-slate-800 text-slate-300 mt-0 rounded-br-md rounded-bl-md shadow-lg'>
+                                {pathname !== "/Presentation" ? (
+                                    <li className="list-none">
+                                        <Link 
+                                            href="/Presentation" 
+                                            className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600"
+                                        >
+                                            Presentation    
+                                        </Link>
+                                    </li>
+                                ) : null}
                                 {pathname !== "/Movies" ? (
                                     <li className="list-none">
                                         <Link 
@@ -105,7 +121,6 @@ const Header = (): JSX.Element => {
                                         <Link 
                                             href="/Theatre" 
                                             className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 rounded-br-md rounded-bl-md"
-                                            
                                         >
                                             Theatre
                                         </Link>
