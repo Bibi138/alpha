@@ -18,6 +18,7 @@ ctl + c
 8) videos + img + paintings (galeries)
 9) Game (snake + pacman)
 10) Le dev qui a souffert le martyre + photo :D
+11) logo pour signet
 
 First, run the development server:
 
