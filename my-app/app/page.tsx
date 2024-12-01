@@ -3,7 +3,6 @@ import imgAlphaLogo from "/public/alpha_letter.png";
 import spiralStairs from "/public/main-spirale.jpg";
 
 export default function Home() {
-  //w-[640px] h-[960px]
   return (
     <div>
 
@@ -19,44 +18,49 @@ export default function Home() {
           <h1 className="text-xl font-bold -ml-6">lpha en minuscule</h1>
         </div>
 
-        <div className="flex flex-row justify-end">
+        <div className="flex flex-row justify-center">
 
-          <article className="flex flex-col justify-between w-4/5 h-[55vh] text-justify text-slate-500 bg-slate-100/90 rounded-tl rounded-bl shadow-box px-8 py-6 ml-10">
-            <p className="indent-4">
-              <span className="text-3xl font-serif font-bold text-slate-900">B</span>ienvenue sur le site de notre maison d&apos;&apos;édition. Mon ambition est de rassembler une 
-              variété d&apos;arts que je vais mettre en œuvre à partir de maintenant. Vous y trouverez 
-              des photographies ainsi que des peintures qui accompagneront les livres que je prévois 
-              de publier. C&apos;est un défi passionnant que je me lance, et je suis déterminé à explorer 
-              ce site Internet tout en me laissant guider par mes inspirations. Je reste ouvert à 
-              toute idée lumineuse qui pourrait éclairer mon chemin.
-            </p>
-            <p className="indent-4 ">
-              <span className="text-3xl font-serif font-bold text-slate-900">C</span>e site est celui d&apos;une maison d&apos;édition, mais il va bien au-delà. C&apos;est un véritable 
-              espace de création que vous pouvez explorer en feuilletant les différentes pages de ce 
-              site. Il s&apos;agit à la fois d&apos;une maison d&apos;édition et d&apos;un lieu de découvertes. Il est 
-              vrai qu&apos;au départ, il pourra sembler vide, mais les contenus s&apos;enrichiront progressivement.
-            </p>
-            <p className="indent-4 ">
-              <span className="text-3xl font-serif font-bold text-slate-900">DC</span>&apos;est avec un plaisir immense que les choses prennent sens et deviennent réalité. 
-              Je suis heureux d&apos;avoir été capable de &apos;créer&apos; ce site Internet, de l&apos;imaginer entièrement. 
-              Ainsi, je souhaite qu&apos;il te plaise également et que tu y reviendras de temps à autres, car 
-              j&apos;y porterai de nouveaux contenus. 
-            </p>
-            <p className="font-bold">
-              Alors bon voyage à toi !
-            </p>
+          <article className="flex flex-row justify-between w-full h-full text-justify text-slate-500 bg-slate-100/90 rounded-tl rounded-bl shadow-box mx-10">
+            
+            <div className="w-4/5 h-auto flex flex-col justify-between p-4">
+              
+              <p className="indent-4">
+                <span className="text-3xl font-serif font-bold text-slate-900">B</span>ienvenue sur le site de notre maison d&apos;&apos;édition. Mon ambition est de rassembler une 
+                variété d&apos;arts que je vais mettre en œuvre à partir de maintenant. Vous y trouverez 
+                des photographies ainsi que des peintures qui accompagneront les livres que je prévois 
+                de publier. C&apos;est un défi passionnant que je me lance, et je suis déterminé à explorer 
+                ce site Internet tout en me laissant guider par mes inspirations. Je reste ouvert à 
+                toute idée lumineuse qui pourrait éclairer mon chemin.
+              </p>
+              <p className="indent-4 ">
+                <span className="text-3xl font-serif font-bold text-slate-900">C</span>e site est celui d&apos;une maison d&apos;édition, mais il va bien au-delà. C&apos;est un véritable 
+                espace de création que vous pouvez explorer en feuilletant les différentes pages de ce 
+                site. Il s&apos;agit à la fois d&apos;une maison d&apos;édition et d&apos;un lieu de découvertes. Il est 
+                vrai qu&apos;au départ, il pourra sembler vide, mais les contenus s&apos;enrichiront progressivement.
+              </p>
+              <p className="indent-4 ">
+                <span className="text-3xl font-serif font-bold text-slate-900">DC</span>&apos;est avec un plaisir immense que les choses prennent sens et deviennent réalité. 
+                Je suis heureux d&apos;avoir été capable de &apos;créer&apos; ce site Internet, de l&apos;imaginer entièrement. 
+                Ainsi, je souhaite qu&apos;il te plaise également et que tu y reviendras de temps à autres, car 
+                j&apos;y porterai de nouveaux contenus. 
+              </p>
+              <p className="font-bold">
+                Alors bon voyage à toi !
+              </p>
+            </div>
+          
+            <div className="w-1/5 flex items-start border border-slate-900 rounded-tr rounded-br shadow-box">
+              <Image 
+                src={spiralStairs} 
+                alt="img spiral stairs" 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+
           </article>
 
-          <div className="w-1/5 flex items-start border border-slate-900 rounded-tr rounded-br shadow-box mr-10">
-            <Image 
-              src={spiralStairs} 
-              alt="img spiral stairs" 
-              className="w-full h-full object-cover" 
-            />
-          </div>
-
-
         </div>
+
       </main>
 
     </div>

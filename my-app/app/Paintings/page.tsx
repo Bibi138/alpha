@@ -16,7 +16,7 @@ const Paintings = (): JSX.Element => {
             <main className="flex flex-col items-center justify-content w-full h-full mb-[120px]">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
 
-                <div className="bg-slate-100 m-10 px-4 py-2 rounded shadow-box">
+                <div className="bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         C&apos;est une chose que j&apos;ai toujours été attiré vers, car c&apos;est un espace de liberté incroyable. 
                         Aucune idée n&apos;est &apos;nulle&apos;. À chaque personne le droit de dessiner ce qu&apos;elle veut. Il ne s&apos;agit 

@@ -13,7 +13,7 @@ const Theatre = (): JSX.Element => {
             <main className="flex flex-col items-center justify-content w-full h-screen">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
             
-                <div className="bg-slate-100 m-10 px-4 py-2 rounded shadow-box">
+                <div className="bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         C&apos;est assez drôle, car je ne me croyais aucunement capable d&apos;être l&apos;auteur d&apos;une pièce de théâtre. 
                         Je pensais ne pas avoir d&apos;histoires à transmettre. Quelle erreur! Le début d&apos;une nouvelle chose est 

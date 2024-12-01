@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       boxShadow: {
-        "box": "0 0 12px #a6a6a6",
+        "box": "0 0 10px #c1c1c1",
       }
     },
   },

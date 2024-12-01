@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from 'next/image';
 import imgPhotoContact from "/public/photo-contact-3.jpg";
 
@@ -9,27 +10,26 @@ export const metadata: Metadata = {
 
 const Contact = (): JSX.Element => {
     return (
-        <div className="w-full min-h-screen">
+        <div className="w-full h-full">
             <h1 className="text-2xl font-bold text-slate-500 pt-24 pl-4">Contact</h1>
 
-            <main className="flex flex-col items-center justify-content w-full h-screen">
-                <div className="mt-20">
+            <main className="flex flex-col items-center justify-content w-full h-full">
+                <div className='flex flex-row items-center justify-center w-[1000px] h-[306px] bg-slate-100/90 rounded shadow-box mt-20 pt-4 pb-4 pl-4'>
 
-                    <div className='flex flex-row items-center justify-center w-[1000px] h-[300px] bg-slate-50 rounded shadow-box'>
+                    <div className="flex flex-row items-center justify-center w-[1200px]">
+                        <p className="text-xl text-slate-500 font-serif">Email: &nbsp;</p>
+                        <Link href="mailto:fabio.lourenco@protonmail.com" className="text-xl font-bold text-slate-500 hover:text-blue-500">fabio.lourenco@protonmail.com</Link>
+                    </div>
 
-                        <div className="flex flex-row items-center justify-center w-[1200px]">
-                            <p className="text-xl text-slate-500">Email: &nbsp;</p>
-                            <p className="text-xl font-bold text-slate-500">fabio.lourenco@protonmail.com</p>
-                        </div>
-
-                        <Image 
+                    <div className="flex w-[520px] h-auto bg-slate-100/90 rounded-tr-md rounded-br-md p-4">
+                        <Image
                             src={imgPhotoContact} 
                             width={1840} height={4080} 
                             alt="img photo contact" 
-                            className="flex w-[300px] h-[300px] rounded-tr-md rounded-br-md"
+                            className="flex w-[100%] h-auto object-cover rounded-md shadow-box"
                         />
-
                     </div>
+
                 </div>
             </main>
         </div>

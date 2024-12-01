@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
     }, [isOpenMenu]);
 
     return (
-        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border border-slate-500/90'>
+        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 border-b border-slate-500/90'>
             <div className="relative flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
                     src={imgAlphaLogo}
