@@ -19,19 +19,19 @@ export default function Home(): JSX.Element {
             src={imgAlphaLogo} 
             width={626} height={626} 
             alt="no img alpha" 
-            className="w-[100px] h-[100px] opacity-90" 
+            className="w-[100px] h-[100px] dark:filter dark:invert opacity-90" 
           />
-          <h1 className="text-xl font-bold text-slate-800 -ml-6">lpha en minuscule</h1>
+          <h1 className="text-xl font-bold -ml-6">lpha en minuscule</h1>
         </div>
 
         <div className="flex flex-row justify-center">
 
-          <article className="flex flex-row justify-between w-full h-full text-justify text-slate-500 bg-slate-100/90 rounded-tl rounded-bl shadow-box mx-10">
+          <article className="flex flex-row justify-between w-full h-full text-justify text-slate-500 bg-slate-100/90 dark:text-slate-300 dark:bg-slate-700/70 rounded-tl rounded-bl shadow-box mx-10">
             
             <div className="w-4/5 h-auto flex flex-col justify-between p-4">
               
               <p className="indent-4">
-                <span className={`text-5xl text-slate-500 ${lavishlyFont.className}`}>
+                <span className={`text-5xl text-slate-500 dark:text-slate-300 ${lavishlyFont.className}`}>
                   B
                 </span>ienvenue sur le site de notre maison d&apos;&apos;édition. Mon ambition est de rassembler une 
                 variété d&apos;arts que je vais mettre en œuvre à partir de maintenant. Vous y trouverez 
@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
                 toute idée lumineuse qui pourrait éclairer mon chemin.
               </p>
               <p className="indent-4 ">
-                <span className={`text-5xl text-slate-500 ${lavishlyFont.className}`}>
+                <span className={`text-5xl text-slate-500 dark:text-slate-300 ${lavishlyFont.className}`}>
                   C
                 </span>e site est celui d&apos;une maison d&apos;édition, mais il va bien au-delà. C&apos;est un véritable 
                 espace de création que vous pouvez explorer en feuilletant les différentes pages de ce 
@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
                 vrai qu&apos;au départ, il pourra sembler vide, mais les contenus s&apos;enrichiront progressivement.
               </p>
               <p className="indent-4 ">
-                <span className={`text-5xl text-slate-500 ${lavishlyFont.className}`}>
+                <span className={`text-5xl text-slate-500 dark:text-slate-300 ${lavishlyFont.className}`}>
                   D
                 </span>évelopper ce site a été un immense plaisir 
                 et c&apos;est ainsi que les choses prennent sens et deviennent réalité. 
@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
                 Ainsi, je souhaite qu&apos;il te plaise également et que tu y reviendras de temps à autres, car 
                 j&apos;y porterai de nouveaux contenus.
               </p>
-              <p className={`text-3xl text-slate-800 mt-4 mb-1 ${lavishlyFont.className}`}>
+              <p className={`text-3xl text-slate-800 dark:text-slate-300 mt-4 mb-1 ${lavishlyFont.className}`}>
                 Alors bon voyage à toi !
               </p>
             </div>
