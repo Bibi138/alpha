@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from 'next/dynamic';
-
+import { ThemeProvider } from '@/app/ProviderTheme';
 //import { Lavishly_Yours } from 'next/font/google';
 //import localFont from "next/font/local";
 
@@ -44,18 +44,20 @@ export default function RootLayout({
   });
   //className={`${geistSans.variable} ${geistMono.variable} antialiased`}
   return (
-    <html lang="en">
-      <body className="absolute -z-20 w-full min-h-screen text-slate-900 bg-slate-50">
-        <div className="fixed -z-10 flex flex-col items-center justify-center w-full h-full">
-          <Image 
-            src={imgAlphaLogo} 
-            width={626} height={626} 
-            alt="no img alpha" 
-            className="w-[700px] h-[700px] opacity-50"
-          />
-        </div>
-        <DynamicHeader />
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-background absolute -z-20 w-full min-h-screen text-slate-800 bg-slate-50 dark:text-slate-50 dark:bg-slate-800">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <DynamicHeader />
+            <div className="fixed -z-10 flex flex-col items-center justify-center w-full h-full">
+              <Image 
+                src={imgAlphaLogo} 
+                width={626} height={626} 
+                alt="no img alpha" 
+                className="w-[700px] h-[700px] dark:filter dark:invert opacity-50"
+              />
+            </div>
           {children}
+        </ThemeProvider>
         <Footer />
       </body>
     </html>
