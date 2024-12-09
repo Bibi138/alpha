@@ -27,7 +27,7 @@ const Contact = (): JSX.Element => {
                         <Link href="mailto:fabio.lourenco@protonmail.com" className="text-xl font-bold text-slate-500 hover:text-blue-500">fabio.lourenco@protonmail.com</Link>
                     </div>
 
-                    <div className="flex w-[520px] h-auto bg-slate-100/90 rounded-tr-md rounded-br-md p-4">
+                    <div className="flex w-[520px] h-auto bg-slate-100/90 dark:bg-slate-100/5 rounded-tr-md rounded-br-md p-4">
                         <Image
                             src={imgPhotoContact} 
                             width={1840} height={4080} 
