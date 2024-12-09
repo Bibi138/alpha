@@ -8,17 +8,17 @@ ctl + c
 
 ---
 
-1) loading 1s timeOut 1s
-2) darkmode à ajouter
+1) 404 page
+2) traductions english - português - français - deutsch
 3) Prévoir les tailles pour mediascreen (smartphone)
 4) Music
-5) Page à remplir Main page (contenu).
-6) emailjs ou email
-7) db pour livre et articles en ventes
-8) videos + img + paintings (galeries)
-9) Game (snake + pacman)
-10) Le dev qui a souffert le martyre + photo :D
-11) logo pour signet
+5) emailjs ou email
+6) db pour livre et articles en ventes
+7) videos + img + paintings (galeries)
+8) Game (snake + pacman)
+9) Le dev qui a souffert le martyre + photo :D
+10) logo pour signet
+11) img color with tailwind to white
 
 First, run the development server:
 
