@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 const Movies = (): JSX.Element => {
     return (
         <div className="w-full min-h-screen">
-            <h1 className={`text-5xl text-slate-500 pt-28 pl-4 ${lavishlyFont.className}`}>Movies</h1>
+            <h1 className={`text-5xl text-slate-500 pt-28 pl-4 ${lavishlyFont.className}`}>Vidéos</h1>
 
             <main className="flex flex-col items-center justify-content w-full h-screen">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
 
-                <div className="bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
+                <div className="text-slate-500 bg-slate-100/90 dark:text-slate-300 dark:bg-slate-700/70 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         Clairement, c&apos;est un axe qui paraît tout à fait différent et pourtant. Qui parle de Cinéma parle 
                         d&apos;écriture également. C&apos;est simplement un moyen de parler, mais de façon bien différente de 

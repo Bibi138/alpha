@@ -19,7 +19,7 @@ const Presentation = (): JSX.Element => {
             <main className="w-full h-full">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
 
-                <div className="text-slate-500 bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
+                <div className="text-slate-500 bg-slate-100/90 dark:text-slate-300 dark:bg-slate-700/70 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         C&apos;est vis à vis de cet élément fondateur de ma nouvelle vie que je vais prendre le temps nécessaire pour 
                         réfléchir et rendre compte de l&apos;absurdité monumentale du monde dans lequel nous nous trouvons. Il est clair 

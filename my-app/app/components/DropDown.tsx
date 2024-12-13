@@ -28,27 +28,27 @@ const DropDown = ({pathname}: PathProps): JSX.Element => {
             onMouseLeave={() => setIsOpenMenu(false)}
             onClick={handleClick}
             className={`${pathname === "/Presentation"
-                ? "text-slate-700 scale-110 hover:text-slate-300" 
+                ? "text-slate-700 scale-110 hover:text-slate-300 dark:text-slate-200" 
                 : pathname === "/Movies" 
-                ? "text-slate-700 scale-110 hover:text-slate-300" 
+                ? "text-slate-700 scale-110 hover:text-slate-300 dark:text-slate-200" 
                 : pathname === "/Paintings" 
-                ? "text-slate-700 scale-110 hover:text-slate-300"
+                ? "text-slate-700 scale-110 hover:text-slate-300 dark:text-slate-200"
                 : pathname === "/Photos" 
-                ? "text-slate-700 scale-110 hover:text-slate-300" 
+                ? "text-slate-700 scale-110 hover:text-slate-300 dark:text-slate-200" 
                 : pathname === "/Theatre" 
-                ? "text-slate-700 scale-110 hover:text-slate-300" 
-                : "font-bold hover:scale-110"} relative cursor-pointer text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300
+                ? "text-slate-700 scale-110 hover:text-slate-300 dark:text-slate-200" 
+                : "font-bold hover:scale-110"} relative cursor-pointer dark:text-slate-500 text-xl font-bold transition duration-200 ease-in-out hover:text-slate-300
                 hover:bg-slate-800 rounded-tr rounded-tl -mb-2 mr-8`}
         >
 
         <div className={`flex flex-row items-center justify-between text-slate-500 ${pathname === "/Presentation" 
-                ? "dark:text-slate-400" : pathname === "/Movies" 
-                ? "dark:text-slate-400" : pathname === "/Paintings" 
-                ? "dark:text-slate-400" : pathname === "/Photos" 
-                ? "dark:text-slate-400" : pathname === "/Theatre" ? "dark:text-slate-400" : "dark:hover:text-slate-400"} mb-1 pr-2 pl-1 py-1`}>
+                ? "dark:text-slate-300" : pathname === "/Movies" 
+                ? "dark:text-slate-300" : pathname === "/Paintings" 
+                ? "dark:text-slate-300" : pathname === "/Photos" 
+                ? "dark:text-slate-300" : pathname === "/Theatre" ? "dark:text-slate-300" : "dark:text-slate-400 dark:hover:text-slate-400"} mb-1 pr-2 pl-1 py-1`}>
             <p className="pl-2">
-                {pathname === "/Presentation" ? "Presentation" : pathname === "/Movies" ? "Movies" : pathname === "/Paintings" 
-                    ? "Paintings" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Theatre" : "Arts"}
+                {pathname === "/Presentation" ? "Présentation" : pathname === "/Movies" ? "Vidéos" : pathname === "/Paintings" 
+                    ? "Peintures" : pathname === "/Photos" ? "Photos" : pathname === "/Theatre" ? "Théâtre" : "Arts"}
             </p>
             <span><FaLongArrowAltDown size={20} /></span>
         </div>
@@ -61,7 +61,7 @@ const DropDown = ({pathname}: PathProps): JSX.Element => {
                             href="/Presentation" 
                             className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 dark:active:text-slate-200"
                         >
-                            Presentation    
+                            Présentation    
                         </Link>
                     </li>
                 ) : null}
@@ -71,7 +71,7 @@ const DropDown = ({pathname}: PathProps): JSX.Element => {
                             href="/Movies" 
                             className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 dark:active:text-slate-200"
                         >
-                            Movies    
+                            Vidéos    
                         </Link>
                     </li>
                 ) : null}
@@ -81,7 +81,7 @@ const DropDown = ({pathname}: PathProps): JSX.Element => {
                             href="/Paintings" 
                             className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 dark:active:text-slate-200"
                         >
-                            Paintings
+                            Peintures
                         </Link>
                     </li>
                 ) : null}
@@ -101,7 +101,7 @@ const DropDown = ({pathname}: PathProps): JSX.Element => {
                             href="/Theatre" 
                             className="block w-full text-lg font-normal pl-3 py-2 hover:text-slate-300 hover:bg-slate-700 active:text-slate-50 active:bg-slate-600 dark:active:text-slate-200 rounded-br-md rounded-bl-md"
                         >
-                            Theatre
+                            Théâtre
                         </Link>
                     </li>
                 ) : null}

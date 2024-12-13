@@ -16,15 +16,14 @@ export const metadata: Metadata = {
 const Paintings = (): JSX.Element => {
     return (
         <div className="w-full min-h-screen">
-            <div className="flex flex-row items-center justify-start pt-28 pl-4">
-                <h1 className={`text-5xl text-slate-500 ${lavishlyFont.className}`}>Paintings</h1> 
-                <p className="text-sm text-slate-300 mt-5 ml-4">(qui est le français moderne de peintures)</p>
+            <div className="pt-28 pl-4">
+                <h1 className={`text-5xl text-slate-500 ${lavishlyFont.className}`}>Peintures</h1> 
             </div>
 
             <main className="flex flex-col items-center justify-content w-full h-full mb-[120px]">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
 
-                <div className="bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
+                <div className="text-slate-500 bg-slate-100/90 dark:text-slate-300 dark:bg-slate-700/70 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         C&apos;est une chose que j&apos;ai toujours été attiré vers, car c&apos;est un espace de liberté incroyable. 
                         Aucune idée n&apos;est &apos;nulle&apos;. À chaque personne le droit de dessiner ce qu&apos;elle veut. Il ne s&apos;agit 

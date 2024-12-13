@@ -19,9 +19,9 @@ export default function Home(): JSX.Element {
             src={imgAlphaLogo} 
             width={626} height={626} 
             alt="no img alpha" 
-            className="w-[100px] h-[100px] dark:filter dark:invert opacity-90" 
+            className="w-[100px] h-[100px] dark:filter dark:invert opacity-90 dark:opacity-100" 
           />
-          <h1 className="text-xl font-bold -ml-6">lpha en minuscule</h1>
+          <h1 className="text-xl text-slate-900 dark:text-slate-50 font-bold -ml-6">lpha en minuscule</h1>
         </div>
 
         <div className="flex flex-row justify-center">

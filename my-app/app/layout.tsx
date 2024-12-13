@@ -45,7 +45,7 @@ export default function RootLayout({
   //className={`${geistSans.variable} ${geistMono.variable} antialiased`}
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background absolute -z-20 w-full min-h-screen text-slate-800 bg-slate-50 dark:text-slate-50 dark:bg-slate-800">
+      <body className="bg-background absolute -z-20 w-full min-h-screen bg-slate-50 dark:text-slate-50 dark:bg-slate-900">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <DynamicHeader />
             <div className="fixed -z-10 flex flex-col items-center justify-center w-full h-full">
@@ -53,7 +53,7 @@ export default function RootLayout({
                 src={imgAlphaLogo} 
                 width={626} height={626} 
                 alt="no img alpha" 
-                className="w-[700px] h-[700px] dark:filter dark:invert opacity-50"
+                className="w-[700px] h-[700px] dark:filter dark:invert opacity-50 dark:opacity-15"
               />
             </div>
           {children}

@@ -19,7 +19,7 @@ const Photos = (): JSX.Element => {
             <main className="w-full h-screen">
                 {/* <h3 className="text-5xl font-bold text-slate-500 bg-slate-50 m-auto mt-[200px]">! En maintenance !</h3> */}
 
-                <div className="bg-slate-100/90 m-10 px-4 py-2 rounded shadow-box">
+                <div className="text-slate-500 bg-slate-100/90 dark:text-slate-300 dark:bg-slate-700/70 m-10 px-4 py-2 rounded shadow-box">
                     <p className="text-justify my-2">
                         Bienvenue à toi dans cette partie du projet monumental en devenir. Ici, toutes sortes de photographies vont 
                         parsemer cette page, je ferai une exposition de certaines images lorsque je le pourrai, beaucoup d&apos;idées 

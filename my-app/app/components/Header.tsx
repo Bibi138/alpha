@@ -25,7 +25,7 @@ const Header = (): JSX.Element | null => {
     if(!mounted) return null;
 
     return (
-        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 dark:text-slate-50 dark:bg-slate-900 border-b border-slate-500/90'>
+        <header className='absolute z-10 flex flex-row w-full h-[80px] text-slate-500 bg-slate-100 dark:text-slate-50 dark:bg-black shadow-box'>
             <div className="relative flex flex-col items-center justify-start w-[112px] h-[80px]">
                 <Image 
                     src={imgAlphaLogo}
@@ -39,29 +39,29 @@ const Header = (): JSX.Element | null => {
 
             <nav className="w-full mr-16">
                 <ul className="flex items-end justify-end h-[69px]">
-                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-8 ${pathname === '/' ? "text-slate-700 dark:text-slate-400 scale-110" : "text-slate-500"}`}>
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-8 ${pathname === '/' ? "text-slate-700 dark:text-slate-300 scale-110" : "text-slate-500 dark:text-slate-400"}`}>
                         <Link 
                             href="/" 
                             className="w-full text-xl font-bold"
                         >
-                            Home
+                            Accueil
                         </Link>
                     </li>
 
                     <DropDown pathname={pathname}/>
 
-                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Shop' ? "text-slate-700 dark:text-slate-400 scale-110" : "text-slate-500"}`}>
-                        <Link href="/Shop" className="w-full text-xl font-bold">Shop</Link>
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-10 ${pathname === '/Shop' ? "text-slate-700 dark:text-slate-300 scale-110" : "text-slate-500 dark:text-slate-400"}`}>
+                        <Link href="/Shop" className="w-full text-xl font-bold">Magasin</Link>
                     </li>
-                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-12 ${pathname === '/Contact' ? "text-slate-700 dark:text-slate-400 scale-110" : "text-slate-500"}`}>
+                    <li className={`list-none transform transition-transform duration-200 ease-in-out hover:text-slate-700 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95 mr-12 ${pathname === '/Contact' ? "text-slate-700 dark:text-slate-300 scale-110" : "text-slate-500 dark:text-slate-400"}`}>
                         <Link href="/Contact" className="w-full text-xl font-bold">Contact</Link>
                     </li>
 
                     {mounted === true ? (
-                        <li className="absolute top-8 right-8 list-none transform bg-white dark:bg-slate-800 border dark:border-slate-700 border-slate-300 p-2 rounded-full">
+                        <li className="absolute top-8 right-8 list-none transform bg-white dark:bg-slate-800 border dark:border-slate-500/50 border-slate-300 p-2 rounded-full">
                             <div
                                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} 
-                                className="w-full text-xl font-bold transition-transform duration-200 ease-in-out hover:text-slate-700 dark:text-slate-500 dark:hover:text-slate-400 hover:scale-110 active:text-slate-300 active:scale-95"
+                                className="w-full text-xl font-bold transition-transform duration-200 ease-in-out hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 hover:scale-110 active:text-slate-300 active:scale-95"
                             >
                                 {theme === 'light' 
                                     ? <IoMoon size={24} /> 
