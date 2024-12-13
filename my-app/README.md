@@ -9,6 +9,7 @@ ctl + c
 ---
 
 1) 404 page
+2) arts à revoir colors
 2) traductions english - português - français - deutsch
 3) Prévoir les tailles pour mediascreen (smartphone)
 4) Music
