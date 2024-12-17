@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.select__control {
+  @apply bg-slate-900;
+}
+
+.select__menu {
+  @apply w-[20px] bg-slate-900;
+}
+
+.select__option {
+  @apply hover:bg-gray-700;
+}
+
 :root {
   --background: #fff;
   --foreground: #171717;

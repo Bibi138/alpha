@@ -35,11 +35,12 @@ const FlagsComponent = (): JSX.Element => {
         }
     };
 
+    //style={{ width: 25, margin: 10 }} 
     const customOption = (props: any): JSX.Element => {
         const { innerRef, innerProps, data } = props;
         return (
-            <div ref={innerRef} {...innerProps} className="custom-option">
-                <Image src={data.flag} alt={`${data.label} flag`} style={{ width: 20, marginRight: 10 }} />
+            <div ref={innerRef} {...innerProps}>
+                <Image src={data.flag} alt={`${data.label} flag`} className="select__option flex items-center w-[25px] m-4" />
             </div>
         );
     };
@@ -47,14 +48,16 @@ const FlagsComponent = (): JSX.Element => {
     const customSingleValue = (props: any): JSX.Element => {
         const { data } = props;
         return (
-            <div className="bg-slate-800 -mt-8">
-                <Image src={data.flag} alt={`${data.label} flag`} style={{ width: 20, paddingTop: -40 }} />
+            <div className="flex items-center select__control -mt-8">
+                <Image src={data.flag} alt={`${data.label} flag`}
+                    className="select__menu w-[25px]" 
+                />
             </div>
         );
     }
 
     return (
-        <div style={{background: "#000", marginRight: "20px"}}>
+        <div style={{ marginRight: "20px" }}>
         
             <Select
                 options={options}
@@ -62,7 +65,7 @@ const FlagsComponent = (): JSX.Element => {
                 components={{ Option: customOption, SingleValue: customSingleValue }}
                 getOptionValue={(option) => option.value}
                 value={selectedOption}
-                className="border"
+                className="select__control"
                 classNamePrefix="select"
             />
 
