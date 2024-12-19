@@ -10,6 +10,7 @@ ctl + c
 
 1) arts à revoir colors (panel en light mode)
 2) traductions english - português - français - deutsch (system)
+3) traduction à faire
 4) Music
 5) emailjs ou email
 6) db pour livre et articles en ventes
