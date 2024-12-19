@@ -4,6 +4,7 @@ import type { StaticImageData } from "next/image";
 import React, { useState } from 'react';
 import Select from 'react-select';
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import frenchFlag from "/public/france_texture.png";
 import unitedKingdomFlag from "/public/united_kingdom_texture.png";
@@ -27,20 +28,24 @@ const options: OptionsProps[] = [
 
 const FlagsComponent = (): JSX.Element => {
 
+    const { theme } = useTheme();
+
+    //const [selectedOption, setSelectedOption] = useState<OptionsProps>(options[0]);
     const [selectedOption, setSelectedOption] = useState<OptionsProps>(options[0]);
 
-      const handleChange = (option: OptionsProps | null): void => {
+    const filteredOptions = options.filter(option => option.value !== selectedOption?.value);
+
+    const handleChange = (option: OptionsProps | null): void => {
         if (option) {
             setSelectedOption(option);
         }
     };
 
-    //style={{ width: 25, margin: 10 }} 
     const customOption = (props: any): JSX.Element => {
         const { innerRef, innerProps, data } = props;
         return (
-            <div ref={innerRef} {...innerProps}>
-                <Image src={data.flag} alt={`${data.label} flag`} className="select__option flex items-center w-[25px] m-4" />
+            <div ref={innerRef} {...innerProps} style={{ width: "100%", padding: 10, background: theme === "dark" ? "#000" : "#f5f5f5" }}>
+                <Image src={data.flag} alt={`${data.label} flag`} style={{ width: 30 }} />
             </div>
         );
     };
@@ -48,25 +53,38 @@ const FlagsComponent = (): JSX.Element => {
     const customSingleValue = (props: any): JSX.Element => {
         const { data } = props;
         return (
-            <div className="flex items-center select__control -mt-8">
-                <Image src={data.flag} alt={`${data.label} flag`}
-                    className="select__menu w-[25px]" 
-                />
+            <div className="-mt-6">
+                <Image src={data.flag} alt={`${data.label} flag`} className="w-[25px]" />
             </div>
         );
     }
+    const multiValueStyles = "bg-transparent";
+    const menuStyles = "bg-transparent";
 
     return (
-        <div style={{ marginRight: "20px" }}>
+        <div className="mr-8">
         
             <Select
-                options={options}
+                unstyled
+                styles={{
+                    control: (base) => ({
+                        ...base,
+                        border: "none",
+                        background: theme === "dark"  ? "#000" : "#f5f5f5",
+                        borderRaduis: "5px",
+                        marginBottom: "-4px"
+                    }),
+                }}
+                options={filteredOptions}
                 onChange={handleChange}
                 components={{ Option: customOption, SingleValue: customSingleValue }}
                 getOptionValue={(option) => option.value}
                 value={selectedOption}
-                className="select__control"
                 classNamePrefix="select"
+                classNames={{
+                    multiValue: () => multiValueStyles,
+                    menu: () => menuStyles,
+                }}
             />
 
         </div>
